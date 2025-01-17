@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main(){
+int arr[5]={1,2,3,7,9}; //must assending order
+int target=7;
+int first=0 , last=4;
+int mid;
+while(first<=last){
+   mid =first+(last-first)/2;
+    if(target==arr[mid]){
+       cout<< "item found";
+       return 0;
+     }
+     if(target< arr[mid]){
+          last=mid-1;
+     }else{
+       first=mid+1;
+     }
+}
+cout<<"item not found";
+return 0;
+}
